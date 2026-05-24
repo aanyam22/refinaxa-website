@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -54,9 +53,7 @@
     text-decoration: none;
   }
 
-  .nav-logo span {
-    color: var(--caramel);
-  }
+  .nav-logo span { color: var(--caramel); }
 
   .nav-links {
     display: flex;
@@ -76,7 +73,6 @@
 
   .nav-links a:hover { color: var(--bark); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -200,7 +196,6 @@
 
   .btn-secondary:hover { border-color: var(--umber); color: var(--umber); }
 
-  /* SECTIONS */
   section { padding: 6rem 4rem; }
 
   .section-label {
@@ -248,66 +243,19 @@
     border-bottom: 1px solid var(--sand);
   }
 
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-  }
-
   .about-text p {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.9;
     color: var(--bark);
     margin-bottom: 1.25rem;
+    max-width: 720px;
   }
 
   .about-text p:last-child { margin-bottom: 0; }
 
-  .about-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .stat-card {
-    padding: 1.75rem;
-    background: var(--cream);
-    border: 1px solid var(--sand);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--caramel);
-  }
-
-  .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: var(--umber);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-  }
-
-  .stat-label {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--bark);
-    line-height: 1.4;
-  }
-
   /* SERVICES */
-  #services {
-    background: var(--cream);
-  }
+  #services { background: var(--cream); }
 
   .services-grid {
     display: grid;
@@ -350,9 +298,7 @@
   }
 
   /* PROJECTS */
-  #projects {
-    background: var(--espresso);
-  }
+  #projects { background: var(--espresso); }
 
   #projects .section-label { color: var(--caramel); }
   #projects .section-label::before { background: var(--caramel); }
@@ -472,7 +418,7 @@
 
   .skills-groups {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
 
@@ -510,9 +456,7 @@
   }
 
   /* CONTACT */
-  #contact {
-    background: var(--cream);
-  }
+  #contact { background: var(--cream); }
 
   .contact-layout {
     display: grid;
@@ -549,10 +493,7 @@
     transition: border-color 0.2s, background 0.2s;
   }
 
-  .contact-link:hover {
-    border-color: var(--umber);
-    background: var(--cream);
-  }
+  .contact-link:hover { border-color: var(--umber); background: var(--cream); }
 
   .contact-link-icon {
     font-family: 'Cormorant Garamond', serif;
@@ -596,11 +537,8 @@
   }
 
   .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: var(--umber);
-  }
+  .form-group textarea:focus { border-color: var(--umber); }
 
-  /* FOOTER */
   footer {
     padding: 2rem 4rem;
     background: var(--ink);
@@ -624,15 +562,6 @@
     color: rgba(217, 201, 168, 0.4);
   }
 
-  /* DIVIDER */
-  .divider {
-    width: 100%;
-    height: 1px;
-    background: var(--sand);
-    margin: 3rem 0;
-  }
-
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -649,19 +578,17 @@
     transform: translateY(0);
   }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1.5rem; }
     section { padding: 4rem 1.5rem; }
     .hero { padding: 7rem 1.5rem 4rem; }
     .hero::after { font-size: 5rem; }
-    .about-grid,
     .skills-layout,
     .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
     .services-grid,
     .projects-grid { grid-template-columns: 1fr; }
-    .about-stats { grid-template-columns: 1fr 1fr; }
+    .skills-groups { grid-template-columns: 1fr 1fr; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 </style>
@@ -684,10 +611,10 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Data Science Consulting</div>
     <h1>Raw data.<br><em>Refined insight.</em></h1>
-    <p class="hero-desc">Refinaxa partners with organizations to transform complex data into clear, actionable intelligence. We specialize in machine learning, predictive modeling, and analytics that drive real decisions.</p>
+    <p class="hero-desc">Refinaxa partners with organizations to transform complex data into clear, actionable intelligence. Specializing in machine learning, AI, and analytics that drive real decisions.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="#contact" class="btn-secondary">Work With Us</a>
+      <a href="#contact" class="btn-secondary">Work Together</a>
     </div>
   </div>
 </section>
@@ -698,30 +625,10 @@
     <div class="section-label">About</div>
     <h2 class="section-title">Where complexity<br>becomes clarity</h2>
   </div>
-  <div class="about-grid fade-up">
-    <div class="about-text">
-      <p>Refinaxa is a boutique data science consulting practice founded on a simple belief: the value of data is not in its volume, but in what you can learn from it.</p>
-      <p>We work across industries including finance, real estate, supply chain, sports analytics, and education, bringing the same rigor and clarity to every engagement. Our work spans unsupervised and supervised machine learning, with a focus on models that are not just accurate, but interpretable and actionable.</p>
-      <p>Every project is grounded in a real business problem. We deliver analysis that decision-makers can understand and use, not just results that look impressive in a notebook.</p>
-    </div>
-    <div class="about-stats">
-      <div class="stat-card">
-        <div class="stat-number">18+</div>
-        <div class="stat-label">Years in healthcare and data analytics</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">R + Py</div>
-        <div class="stat-label">Primary analysis tools</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">6+</div>
-        <div class="stat-label">Industry domains covered</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">ML</div>
-        <div class="stat-label">Supervised and unsupervised methods</div>
-      </div>
-    </div>
+  <div class="about-text fade-up">
+    <p>Refinaxa is a boutique analytics and AI consulting practice built on a simple belief: the value of data is not in its volume, but in what you can learn from it.</p>
+    <p>This is a freelance practice focused on building real-world experience across industries — from finance and real estate to supply chain, sports, and education. Each project brings the same rigor and clarity regardless of domain, spanning unsupervised and supervised machine learning and applied AI, with a focus on models that are not just accurate but interpretable and actionable.</p>
+    <p>Every engagement is grounded in a real business problem. The goal is always the same: deliver analysis that decision-makers can understand and use, not just results that look impressive in a notebook.</p>
   </div>
 </section>
 
@@ -729,24 +636,24 @@
 <section id="services">
   <div class="fade-up">
     <div class="section-label">Services</div>
-    <h2 class="section-title">What we do</h2>
-    <p class="section-intro">From exploratory analysis through production-ready models, we help organizations at every stage of their data journey.</p>
+    <h2 class="section-title">What Refinaxa does</h2>
+    <p class="section-intro">From exploratory analysis through production-ready models, Refinaxa helps organizations at every stage of their data journey.</p>
   </div>
   <div class="services-grid fade-up">
     <div class="service-card">
       <div class="service-icon">01</div>
       <div class="service-title">Predictive Modeling</div>
-      <p class="service-desc">Classification, regression, and time series models built for interpretability and real-world deployment. We translate business questions into modeling problems and deliver results that make sense to stakeholders.</p>
+      <p class="service-desc">Classification, regression, and time series models built for interpretability and real-world deployment. Business questions are translated into modeling problems with results that make sense to stakeholders.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">02</div>
       <div class="service-title">Segmentation & Clustering</div>
-      <p class="service-desc">Uncover hidden structure in your data. We apply clustering, PCA, and association rule learning to segment customers, products, markets, and more into actionable groups.</p>
+      <p class="service-desc">Uncovering hidden structure in data through clustering, PCA, and association rule learning to segment customers, products, markets, and more into actionable groups.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">03</div>
       <div class="service-title">Analytics & Reporting</div>
-      <p class="service-desc">Clear, audience-aware reporting that bridges technical analysis and business decision-making. We specialize in turning complex findings into plain-language recommendations.</p>
+      <p class="service-desc">Clear, audience-aware reporting that bridges technical analysis and business decision-making. Complex findings are translated into plain-language recommendations that drive action.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">04</div>
@@ -756,12 +663,12 @@
     <div class="service-card">
       <div class="service-icon">05</div>
       <div class="service-title">Data Pipeline & Preparation</div>
-      <p class="service-desc">Clean, analysis-ready data is the foundation of every good model. We build preprocessing pipelines, handle feature engineering, and ensure your data is structured for the problem at hand.</p>
+      <p class="service-desc">Clean, analysis-ready data is the foundation of every good model. Preprocessing pipelines, feature engineering, and structured data preparation tailored to the problem at hand.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">06</div>
-      <div class="service-title">Domain-Specific Analytics</div>
-      <p class="service-desc">Specialized experience in healthcare, finance, real estate, supply chain, and sports analytics. We bring domain knowledge alongside technical rigor to every engagement.</p>
+      <div class="service-title">Agentic AI</div>
+      <p class="service-desc">AI systems that do not just answer questions but take action. Design and development of autonomous agents that reason across tools, APIs, and data sources to complete multi-step tasks with minimal human intervention.</p>
     </div>
   </div>
 </section>
@@ -778,7 +685,7 @@
       <div class="project-number">01</div>
       <div class="project-domain">Real Estate</div>
       <div class="project-title">Melbourne Housing Price Benchmark</div>
-      <p class="project-desc">Clustered 8,887 properties by physical characteristics to identify five distinct property types for price benchmarking, independent of location labels.</p>
+      <p class="project-desc">A portfolio project clustering 8,887 properties by physical characteristics to identify distinct property types for price benchmarking, independent of location labels.</p>
       <div class="project-tags">
         <span class="tag">K-Means</span>
         <span class="tag">Hierarchical</span>
@@ -792,13 +699,13 @@
     </div>
     <div class="project-card">
       <div class="project-number">02</div>
-      <div class="project-domain">Finance</div>
-      <div class="project-title">Credit Risk Classification</div>
-      <p class="project-desc">Evaluated autoencoder pretraining against logistic regression for credit risk modeling using the German credit dataset for a major European bank.</p>
+      <div class="project-domain">AI & NLP</div>
+      <div class="project-title">Natural Language to SQL Query Engine</div>
+      <p class="project-desc">A portfolio project building an AI-powered query engine that translates plain English questions into executable SQL using GPT-3.5, applied to Amazon product and review data hosted in PostgreSQL.</p>
       <div class="project-tags">
-        <span class="tag">Autoencoder</span>
-        <span class="tag">PCA</span>
-        <span class="tag">Logistic Regression</span>
+        <span class="tag">GPT-3.5</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">NLP</span>
         <span class="tag">Python</span>
       </div>
       <div class="project-links">
@@ -810,12 +717,12 @@
       <div class="project-number">03</div>
       <div class="project-domain">Investment</div>
       <div class="project-title">ETF & Mutual Fund Clustering</div>
-      <p class="project-desc">Clusters Fidelity and Vanguard funds by actual behavior rather than category label to surface actionable options for long-term and retirement investors.</p>
+      <p class="project-desc">A portfolio project clustering Fidelity and Vanguard funds by actual behavior rather than category label to surface actionable options for long-term and retirement investors.</p>
       <div class="project-tags">
         <span class="tag">Clustering</span>
         <span class="tag">PCA</span>
         <span class="tag">Local LLM</span>
-        <span class="tag">Finance</span>
+        <span class="tag">Python</span>
       </div>
       <div class="project-links">
         <a href="#" class="project-link">Paper →</a>
@@ -826,7 +733,7 @@
       <div class="project-number">04</div>
       <div class="project-domain">Sports Analytics</div>
       <div class="project-title">WNBA Player Analytics & Betting Prediction</div>
-      <p class="project-desc">Clusters WNBA players by playing style, predicts game outcomes, and identifies potentially mispriced betting lines using neural network models.</p>
+      <p class="project-desc">A portfolio project clustering WNBA players by playing style, predicting game outcomes, and identifying potentially mispriced betting lines using neural network models.</p>
       <div class="project-tags">
         <span class="tag">Neural Network</span>
         <span class="tag">Clustering</span>
@@ -842,7 +749,7 @@
       <div class="project-number">05</div>
       <div class="project-domain">Supply Chain</div>
       <div class="project-title">Inventory & Space Optimization</div>
-      <p class="project-desc">Uses LSTM neural networks to predict demand patterns, optimal reorder points, and warehouse slot assignments from historical transaction data.</p>
+      <p class="project-desc">A portfolio project using LSTM neural networks to predict demand patterns, optimal reorder points, and warehouse slot assignments from historical transaction data.</p>
       <div class="project-tags">
         <span class="tag">LSTM</span>
         <span class="tag">Forecasting</span>
@@ -858,7 +765,7 @@
       <div class="project-number">06</div>
       <div class="project-domain">Education</div>
       <div class="project-title">College Student Success Prediction</div>
-      <p class="project-desc">Predicts at-risk students from early warning signals and recommends course sequences using association rules on historical enrollment patterns.</p>
+      <p class="project-desc">A portfolio project predicting at-risk students from early warning signals and recommending course sequences using association rules on historical enrollment patterns.</p>
       <div class="project-tags">
         <span class="tag">Association Rules</span>
         <span class="tag">Classification</span>
@@ -881,7 +788,7 @@
   </div>
   <div class="skills-layout fade-up">
     <div class="skills-intro">
-      <p>We work primarily in R and Python, applying both unsupervised and supervised methods across a range of domains. Every tool is chosen for the problem, not for novelty.</p>
+      <p>Python is the primary working language at Refinaxa, with additional experience in R and SQL. Every tool is chosen for the problem, not for novelty.</p>
     </div>
     <div class="skills-groups">
       <div>
@@ -909,23 +816,12 @@
       <div>
         <div class="skill-group-title">Tools & Languages</div>
         <ul class="skill-list">
-          <li>R & R Markdown</li>
-          <li>Python & scikit-learn</li>
-          <li>TensorFlow & Keras</li>
+          <li>Python (primary)</li>
+          <li>R</li>
+          <li>SQL & PostgreSQL</li>
+          <li>scikit-learn & TensorFlow</li>
           <li>ggplot2 & matplotlib</li>
-          <li>GitHub & version control</li>
           <li>Jupyter & VS Code</li>
-        </ul>
-      </div>
-      <div>
-        <div class="skill-group-title">Domains</div>
-        <ul class="skill-list">
-          <li>Healthcare & clinical data</li>
-          <li>Finance & investment</li>
-          <li>Real estate & housing</li>
-          <li>Supply chain & logistics</li>
-          <li>Sports analytics</li>
-          <li>Education & survey data</li>
         </ul>
       </div>
     </div>
@@ -942,11 +838,11 @@
     <div class="contact-text">
       <p>Interested in working together or have a project in mind? Refinaxa is currently available for freelance engagements. Reach out through any of the channels below.</p>
       <div class="contact-links">
-        <a href="mailto:hello@refinaxa.com" class="contact-link">
+        <a href="mailto:Refinaxa@protonmail.com" class="contact-link">
           <span class="contact-link-icon">@</span>
-          hello@refinaxa.com
+          Refinaxa@protonmail.com
         </a>
-        <a href="https://linkedin.com" class="contact-link" target="_blank">
+        <a href="https://www.linkedin.com/in/adwoa-nyame/" class="contact-link" target="_blank">
           <span class="contact-link-icon">in</span>
           LinkedIn
         </a>
@@ -969,7 +865,7 @@
         <label>Message</label>
         <textarea rows="5" placeholder="Tell me about your project..."></textarea>
       </div>
-      <a href="mailto:hello@refinaxa.com" class="btn-primary" style="text-align:center;">Send Message</a>
+      <a href="mailto:Refinaxa@protonmail.com" class="btn-primary" style="text-align:center;">Send Message</a>
     </div>
   </div>
 </section>
@@ -982,9 +878,7 @@
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.1 });
 
