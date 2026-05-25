@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Refinaxa — Data Science Consulting</title>
+<title>Adwoa Nyame Data Scientist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -31,6 +31,7 @@
     overflow-x: hidden;
   }
 
+  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -46,14 +47,14 @@
 
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 500;
     color: var(--bark);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-decoration: none;
   }
 
-  .nav-logo span { color: var(--caramel); }
+  .nav-logo span { color: var(--caramel); font-style: italic; }
 
   .nav-links {
     display: flex;
@@ -62,9 +63,9 @@
   }
 
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--umber);
     text-decoration: none;
@@ -73,6 +74,7 @@
 
   .nav-links a:hover { color: var(--bark); }
 
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -94,29 +96,29 @@
     pointer-events: none;
   }
 
-  .hero::after {
-    content: 'REFINAXA';
+  .hero-watermark {
     position: absolute;
     bottom: 2rem;
     right: 3rem;
     font-family: 'Cormorant Garamond', serif;
     font-size: 10rem;
     font-weight: 300;
-    color: rgba(196, 164, 107, 0.08);
-    letter-spacing: 0.2em;
+    color: rgba(196, 164, 107, 0.07);
+    letter-spacing: 0.1em;
     pointer-events: none;
     line-height: 1;
+    white-space: nowrap;
   }
 
   .hero-content {
-    max-width: 700px;
+    max-width: 760px;
     animation: fadeUp 0.8s ease both;
   }
 
   .hero-eyebrow {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--caramel);
     margin-bottom: 1.5rem;
@@ -137,7 +139,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.08;
     color: var(--ink);
     margin-bottom: 1.5rem;
   }
@@ -152,14 +154,49 @@
     font-weight: 300;
     line-height: 1.8;
     color: var(--bark);
-    max-width: 520px;
+    max-width: 560px;
+    margin-bottom: 2rem;
+  }
+
+  /* BIO STRIP */
+  .hero-bio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
     margin-bottom: 2.5rem;
+    border-top: 1px solid var(--sand);
+    border-bottom: 1px solid var(--sand);
+    padding: 1rem 0;
+  }
+
+  .hero-bio-item {
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--umber);
+    padding-right: 1.5rem;
+    margin-right: 1.5rem;
+    border-right: 1px solid var(--sand);
+    line-height: 1.5;
+  }
+
+  .hero-bio-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+
+  .hero-bio-item strong {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--caramel);
+    margin-bottom: 0.2rem;
   }
 
   .hero-cta {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .btn-primary {
@@ -167,14 +204,15 @@
     background: var(--bark);
     color: var(--cream);
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
     text-decoration: none;
     border: none;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
+    display: inline-block;
   }
 
   .btn-primary:hover { background: var(--espresso); transform: translateY(-1px); }
@@ -184,24 +222,26 @@
     background: transparent;
     color: var(--bark);
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
     text-decoration: none;
     border: 1px solid var(--sand);
     cursor: pointer;
     transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
   }
 
   .btn-secondary:hover { border-color: var(--umber); color: var(--umber); }
 
+  /* SHARED SECTION STYLES */
   section { padding: 6rem 4rem; }
 
   .section-label {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--caramel);
     margin-bottom: 0.75rem;
@@ -223,7 +263,7 @@
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 400;
     color: var(--ink);
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: 1rem;
   }
 
@@ -234,67 +274,6 @@
     line-height: 1.8;
     max-width: 560px;
     margin-bottom: 3.5rem;
-  }
-
-  /* ABOUT */
-  #about {
-    background: var(--parchment);
-    border-top: 1px solid var(--sand);
-    border-bottom: 1px solid var(--sand);
-  }
-
-  .about-text p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.9;
-    color: var(--bark);
-    margin-bottom: 1.25rem;
-    max-width: 720px;
-  }
-
-  .about-text p:last-child { margin-bottom: 0; }
-
-  /* SERVICES */
-  #services { background: var(--cream); }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5px;
-    background: var(--sand);
-    border: 1.5px solid var(--sand);
-  }
-
-  .service-card {
-    background: var(--cream);
-    padding: 2.5rem;
-    transition: background 0.3s;
-  }
-
-  .service-card:hover { background: var(--parchment); }
-
-  .service-icon {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    color: var(--caramel);
-    margin-bottom: 1rem;
-    line-height: 1;
-  }
-
-  .service-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 0.75rem;
-  }
-
-  .service-desc {
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--bark);
   }
 
   /* PROJECTS */
@@ -309,7 +288,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
-    background: rgba(196, 164, 107, 0.2);
+    background: rgba(196, 164, 107, 0.18);
   }
 
   .project-card {
@@ -327,18 +306,48 @@
     border-color: rgba(196, 164, 107, 0.3);
   }
 
+  /* Featured card full width top row */
+  .project-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .project-card.featured .project-left {}
+  .project-card.featured .project-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .project-featured-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--caramel);
+    padding: 0.25rem 0.7rem;
+    margin-bottom: 0.75rem;
+  }
+
   .project-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 300;
-    color: rgba(196, 164, 107, 0.2);
+    color: rgba(196, 164, 107, 0.18);
     line-height: 1;
   }
 
   .project-domain {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 500;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--caramel);
   }
@@ -351,10 +360,14 @@
     line-height: 1.3;
   }
 
+  .project-card.featured .project-title {
+    font-size: 1.75rem;
+  }
+
   .project-desc {
     font-size: 0.875rem;
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--sand);
     flex: 1;
   }
@@ -367,11 +380,11 @@
   }
 
   .tag {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 400;
     letter-spacing: 0.05em;
-    padding: 0.25rem 0.65rem;
-    border: 1px solid rgba(196, 164, 107, 0.3);
+    padding: 0.22rem 0.6rem;
+    border: 1px solid rgba(196, 164, 107, 0.28);
     color: var(--sand);
   }
 
@@ -384,7 +397,7 @@
   }
 
   .project-link {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -402,68 +415,59 @@
     border-bottom: 1px solid var(--sand);
   }
 
-  .skills-layout {
+  .skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--sand);
+  }
+
+  .skill-category {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 5rem;
+    grid-template-columns: 220px 1fr;
+    gap: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--sand);
     align-items: start;
   }
 
-  .skills-intro p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.8;
-    color: var(--bark);
-  }
-
-  .skills-groups {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .skill-group-title {
+  .skill-category-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 500;
     color: var(--umber);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--sand);
+    padding-top: 0.2rem;
+    line-height: 1.3;
   }
 
-  .skill-list {
-    list-style: none;
+  .skill-pills {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.5rem;
   }
 
-  .skill-list li {
-    font-size: 0.875rem;
-    font-weight: 300;
+  .skill-pill {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    padding: 0.4rem 1rem;
+    background: var(--cream);
+    border: 1px solid var(--sand);
     color: var(--bark);
-    padding-left: 1rem;
-    position: relative;
+    transition: border-color 0.2s, background 0.2s;
   }
 
-  .skill-list li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--caramel);
-    font-size: 0.75rem;
+  .skill-pill:hover { border-color: var(--umber); background: var(--white); }
+
+  .skill-pill.highlight {
+    background: var(--bark);
+    border-color: var(--bark);
+    color: var(--cream);
   }
 
   /* CONTACT */
   #contact { background: var(--cream); }
 
-  .contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
 
   .contact-text p {
     font-size: 1rem;
@@ -502,53 +506,12 @@
     min-width: 20px;
   }
 
-  .contact-form-area {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
 
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
 
-  .form-group label {
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--umber);
-  }
 
-  .form-group input,
-  .form-group textarea {
-    padding: 0.85rem 1rem;
-    background: var(--parchment);
-    border: 1px solid var(--sand);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: var(--espresso);
-    outline: none;
-    transition: border-color 0.2s;
-    resize: none;
-  }
 
-  .form-group input:focus,
-  .form-group textarea:focus { border-color: var(--umber); }
 
-  footer {
-    padding: 2rem 4rem;
-    background: var(--ink);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgba(196, 164, 107, 0.2);
-  }
-
-  .footer-logo {
+  .footer-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
     font-weight: 400;
@@ -557,11 +520,12 @@
   }
 
   .footer-copy {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 300;
     color: rgba(217, 201, 168, 0.4);
   }
 
+  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -573,22 +537,21 @@
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1.5rem; }
     section { padding: 4rem 1.5rem; }
     .hero { padding: 7rem 1.5rem 4rem; }
-    .hero::after { font-size: 5rem; }
-    .skills-layout,
-    .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-    .services-grid,
+    .hero-watermark { font-size: 4rem; }
+    .hero-bio { flex-direction: column; gap: 0.75rem; }
+    .hero-bio-item { border-right: none; padding-right: 0; margin-right: 0; border-bottom: 1px solid var(--sand); padding-bottom: 0.75rem; }
+    .hero-bio-item:last-child { border-bottom: none; }
+    .skill-category { grid-template-columns: 1fr; gap: 1rem; }
     .projects-grid { grid-template-columns: 1fr; }
-    .skills-groups { grid-template-columns: 1fr 1fr; }
+    .project-card.featured { grid-template-columns: 1fr; gap: 1.5rem; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 </style>
@@ -596,10 +559,8 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">Refin<span>axa</span></a>
+  <a href="#" class="nav-logo">Adwoa <span>Nyame</span></a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -609,68 +570,35 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-eyebrow">Data Science Consulting</div>
+    <div class="hero-eyebrow">Data Scientist &amp; Operations Leader</div>
     <h1>Raw data.<br><em>Refined insight.</em></h1>
-    <p class="hero-desc">Refinaxa partners with organizations to transform complex data into clear, actionable intelligence. Specializing in machine learning, AI, and analytics that drive real decisions.</p>
+    <p class="hero-desc">I build machine learning models and applied AI systems that translate complex data into decisions people can actually use from unsupervised clustering to LLM-powered analytics, end to end.</p>
+
+    <div class="hero-bio">
+      <div class="hero-bio-item">
+        <strong>Current Role</strong>
+        Operations Manager
+      </div>
+      <div class="hero-bio-item">
+        <strong>Education</strong>
+        MS Data Science · Northwestern  ·  BA · Colby College
+      </div>
+      <div class="hero-bio-item">
+        <strong>Stack</strong>
+        Python · R · SQL
+      </div>
+      <div class="hero-bio-item">
+        <strong>Location</strong>
+        Chicago, IL
+      </div>
+    </div>
+
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="#contact" class="btn-secondary">Work Together</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="fade-up">
-    <div class="section-label">About</div>
-    <h2 class="section-title">Where complexity<br>becomes clarity</h2>
-  </div>
-  <div class="about-text fade-up">
-    <p>Refinaxa is a boutique analytics and AI consulting practice built on a simple belief: the value of data is not in its volume, but in what you can learn from it.</p>
-    <p>This is a freelance practice focused on building real-world experience across industries — from finance and real estate to supply chain, sports, and education. Each project brings the same rigor and clarity regardless of domain, spanning unsupervised and supervised machine learning and applied AI, with a focus on models that are not just accurate but interpretable and actionable.</p>
-    <p>Every engagement is grounded in a real business problem. The goal is always the same: deliver analysis that decision-makers can understand and use, not just results that look impressive in a notebook.</p>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="fade-up">
-    <div class="section-label">Services</div>
-    <h2 class="section-title">What Refinaxa does</h2>
-    <p class="section-intro">From exploratory analysis through production-ready models, Refinaxa helps organizations at every stage of their data journey.</p>
-  </div>
-  <div class="services-grid fade-up">
-    <div class="service-card">
-      <div class="service-icon">01</div>
-      <div class="service-title">Predictive Modeling</div>
-      <p class="service-desc">Classification, regression, and time series models built for interpretability and real-world deployment. Business questions are translated into modeling problems with results that make sense to stakeholders.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">02</div>
-      <div class="service-title">Segmentation & Clustering</div>
-      <p class="service-desc">Uncovering hidden structure in data through clustering, PCA, and association rule learning to segment customers, products, markets, and more into actionable groups.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">03</div>
-      <div class="service-title">Analytics & Reporting</div>
-      <p class="service-desc">Clear, audience-aware reporting that bridges technical analysis and business decision-making. Complex findings are translated into plain-language recommendations that drive action.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">04</div>
-      <div class="service-title">Neural Networks & Deep Learning</div>
-      <p class="service-desc">Autoencoders, LSTM forecasting, and neural network classifiers for problems where traditional methods fall short. Applied to demand forecasting, anomaly detection, and recommendation systems.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">05</div>
-      <div class="service-title">Data Pipeline & Preparation</div>
-      <p class="service-desc">Clean, analysis-ready data is the foundation of every good model. Preprocessing pipelines, feature engineering, and structured data preparation tailored to the problem at hand.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">06</div>
-      <div class="service-title">Agentic AI</div>
-      <p class="service-desc">AI systems that do not just answer questions but take action. Design and development of autonomous agents that reason across tools, APIs, and data sources to complete multi-step tasks with minimal human intervention.</p>
-    </div>
-  </div>
+  <div class="hero-watermark">AN</div>
 </section>
 
 <!-- PROJECTS -->
@@ -678,14 +606,36 @@
   <div class="fade-up">
     <div class="section-label">Projects</div>
     <h2 class="section-title">Selected work</h2>
-    <p class="section-intro">Applied machine learning across real business problems. Each project is grounded in a domain challenge and built end to end.</p>
+    <p class="section-intro">Applied machine learning across real business problems. Each project is built end to end from messy data through to a result a decision-maker can use.</p>
   </div>
   <div class="projects-grid fade-up">
+
+    <!-- FEATURED: LLM project -->
+    <div class="project-card featured">
+      <div class="project-left">
+        <div class="project-featured-badge">Featured · Active</div>
+        <div class="project-number">01</div>
+        <div class="project-domain">Applied AI · Contact Center</div>
+        <div class="project-title">LLM-Powered Customer Outcome Analysis</div>
+      </div>
+      <div class="project-right">
+        <p class="project-desc">Leveraging large language models to analyze phone and web chat transcripts, identifying patterns that lead to poor customer outcomes. The pipeline ingests raw transcript data, uses LLM-based classification to flag negative interactions, and surfaces actionable signals for operations teams to improve agent performance and customer experience at scale. Built end to end in Python.</p>
+        <div class="project-tags">
+          <span class="tag">LLMs</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Text Classification</span>
+          <span class="tag">Python</span>
+          <span class="tag">Contact Center Analytics</span>
+          <span class="tag">Operations</span>
+        </div>
+      </div>
+    </div>
+
     <div class="project-card">
-      <div class="project-number">01</div>
+      <div class="project-number">02</div>
       <div class="project-domain">Real Estate</div>
       <div class="project-title">Melbourne Housing Price Benchmark</div>
-      <p class="project-desc">A portfolio project clustering 8,887 properties by physical characteristics to identify distinct property types for price benchmarking, independent of location labels.</p>
+      <p class="project-desc">Clustering 8,887 properties by physical characteristics to identify distinct property types for price benchmarking, independent of location labels.</p>
       <div class="project-tags">
         <span class="tag">K-Means</span>
         <span class="tag">Hierarchical</span>
@@ -693,15 +643,16 @@
         <span class="tag">R</span>
       </div>
       <div class="project-links">
-        <a href="#" class="project-link">Paper →</a>
+        <a href="#" class="project-link">Blog Post →</a>
         <a href="#" class="project-link">GitHub →</a>
       </div>
     </div>
+
     <div class="project-card">
-      <div class="project-number">02</div>
-      <div class="project-domain">AI & NLP</div>
+      <div class="project-number">03</div>
+      <div class="project-domain">AI &amp; NLP</div>
       <div class="project-title">Natural Language to SQL Query Engine</div>
-      <p class="project-desc">A portfolio project building an AI-powered query engine that translates plain English questions into executable SQL using GPT-3.5, applied to Amazon product and review data hosted in PostgreSQL.</p>
+      <p class="project-desc">An AI-powered query engine that translates plain English questions into executable SQL using GPT-3.5, applied to Amazon product and review data hosted in PostgreSQL.</p>
       <div class="project-tags">
         <span class="tag">GPT-3.5</span>
         <span class="tag">PostgreSQL</span>
@@ -709,15 +660,16 @@
         <span class="tag">Python</span>
       </div>
       <div class="project-links">
-        <a href="#" class="project-link">Paper →</a>
+        <a href="#" class="project-link">Blog Post →</a>
         <a href="#" class="project-link">GitHub →</a>
       </div>
     </div>
+
     <div class="project-card">
-      <div class="project-number">03</div>
+      <div class="project-number">04</div>
       <div class="project-domain">Investment</div>
-      <div class="project-title">ETF & Mutual Fund Clustering</div>
-      <p class="project-desc">A portfolio project clustering Fidelity and Vanguard funds by actual behavior rather than category label to surface actionable options for long-term and retirement investors.</p>
+      <div class="project-title">ETF &amp; Mutual Fund Clustering</div>
+      <p class="project-desc">Clustering Fidelity and Vanguard funds by actual behavior rather than category label to surface actionable options for long-term and retirement investors.</p>
       <div class="project-tags">
         <span class="tag">Clustering</span>
         <span class="tag">PCA</span>
@@ -725,15 +677,16 @@
         <span class="tag">Python</span>
       </div>
       <div class="project-links">
-        <a href="#" class="project-link">Paper →</a>
+        <a href="#" class="project-link">Blog Post →</a>
         <a href="#" class="project-link">GitHub →</a>
       </div>
     </div>
+
     <div class="project-card">
-      <div class="project-number">04</div>
+      <div class="project-number">05</div>
       <div class="project-domain">Sports Analytics</div>
-      <div class="project-title">WNBA Player Analytics & Betting Prediction</div>
-      <p class="project-desc">A portfolio project clustering WNBA players by playing style, predicting game outcomes, and identifying potentially mispriced betting lines using neural network models.</p>
+      <div class="project-title">WNBA Player Analytics &amp; Outcome Prediction</div>
+      <p class="project-desc">Clustering WNBA players by playing style, predicting game outcomes, and identifying potentially mispriced betting lines using neural network models.</p>
       <div class="project-tags">
         <span class="tag">Neural Network</span>
         <span class="tag">Clustering</span>
@@ -741,15 +694,16 @@
         <span class="tag">Python</span>
       </div>
       <div class="project-links">
-        <a href="#" class="project-link">Paper →</a>
+        <a href="#" class="project-link">Blog Post →</a>
         <a href="#" class="project-link">GitHub →</a>
       </div>
     </div>
+
     <div class="project-card">
-      <div class="project-number">05</div>
+      <div class="project-number">06</div>
       <div class="project-domain">Supply Chain</div>
-      <div class="project-title">Inventory & Space Optimization</div>
-      <p class="project-desc">A portfolio project using LSTM neural networks to predict demand patterns, optimal reorder points, and warehouse slot assignments from historical transaction data.</p>
+      <div class="project-title">Inventory &amp; Space Optimization</div>
+      <p class="project-desc">Using LSTM neural networks to predict demand patterns, optimal reorder points, and warehouse slot assignments from historical transaction data.</p>
       <div class="project-tags">
         <span class="tag">LSTM</span>
         <span class="tag">Forecasting</span>
@@ -757,15 +711,16 @@
         <span class="tag">Python</span>
       </div>
       <div class="project-links">
-        <a href="#" class="project-link">Paper →</a>
+        <a href="#" class="project-link">Blog Post →</a>
         <a href="#" class="project-link">GitHub →</a>
       </div>
     </div>
+
     <div class="project-card">
-      <div class="project-number">06</div>
+      <div class="project-number">07</div>
       <div class="project-domain">Education</div>
       <div class="project-title">College Student Success Prediction</div>
-      <p class="project-desc">A portfolio project predicting at-risk students from early warning signals and recommending course sequences using association rules on historical enrollment patterns.</p>
+      <p class="project-desc">Predicting at-risk students from early warning signals and recommending course sequences using association rules on historical enrollment patterns.</p>
       <div class="project-tags">
         <span class="tag">Association Rules</span>
         <span class="tag">Classification</span>
@@ -773,10 +728,11 @@
         <span class="tag">R</span>
       </div>
       <div class="project-links">
-        <a href="#" class="project-link">Paper →</a>
+        <a href="#" class="project-link">Blog Post →</a>
         <a href="#" class="project-link">GitHub →</a>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -785,46 +741,84 @@
   <div class="fade-up">
     <div class="section-label">Skills</div>
     <h2 class="section-title">Technical toolkit</h2>
+    <p class="section-intro">Python is my primary working language, with additional depth in R and SQL. Every tool chosen for the problem, not for novelty.</p>
   </div>
-  <div class="skills-layout fade-up">
-    <div class="skills-intro">
-      <p>Python is the primary working language at Refinaxa, with additional experience in R and SQL. Every tool is chosen for the problem, not for novelty.</p>
-    </div>
-    <div class="skills-groups">
-      <div>
-        <div class="skill-group-title">Unsupervised Learning</div>
-        <ul class="skill-list">
-          <li>K-Means & hierarchical clustering</li>
-          <li>Principal components analysis</li>
-          <li>Association rule learning</li>
-          <li>Autoencoders</li>
-          <li>t-SNE & MDS visualization</li>
-          <li>Anomaly detection</li>
-        </ul>
-      </div>
-      <div>
-        <div class="skill-group-title">Supervised Learning</div>
-        <ul class="skill-list">
-          <li>Logistic & linear regression</li>
-          <li>Neural networks</li>
-          <li>LSTM time series</li>
-          <li>Classification modeling</li>
-          <li>Cross-validation & model selection</li>
-          <li>Feature engineering</li>
-        </ul>
-      </div>
-      <div>
-        <div class="skill-group-title">Tools & Languages</div>
-        <ul class="skill-list">
-          <li>Python (primary)</li>
-          <li>R</li>
-          <li>SQL & PostgreSQL</li>
-          <li>scikit-learn & TensorFlow</li>
-          <li>ggplot2 & matplotlib</li>
-          <li>Jupyter & VS Code</li>
-        </ul>
+  <div class="skills-categories fade-up">
+
+    <div class="skill-category">
+      <div class="skill-category-name">Languages</div>
+      <div class="skill-pills">
+        <span class="skill-pill highlight">Python</span>
+        <span class="skill-pill highlight">R</span>
+        <span class="skill-pill highlight">SQL</span>
+        <span class="skill-pill">PostgreSQL</span>
+        <span class="skill-pill">Excel VBA</span>
       </div>
     </div>
+
+    <div class="skill-category">
+      <div class="skill-category-name">Machine Learning</div>
+      <div class="skill-pills">
+        <span class="skill-pill">K-Means Clustering</span>
+        <span class="skill-pill">Hierarchical Clustering</span>
+        <span class="skill-pill">PCA</span>
+        <span class="skill-pill">t-SNE</span>
+        <span class="skill-pill">Association Rule Learning</span>
+        <span class="skill-pill">Logistic Regression</span>
+        <span class="skill-pill">Classification</span>
+        <span class="skill-pill">Feature Engineering</span>
+        <span class="skill-pill">Cross-validation</span>
+        <span class="skill-pill">Anomaly Detection</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-name">Deep Learning</div>
+      <div class="skill-pills">
+        <span class="skill-pill">Neural Networks</span>
+        <span class="skill-pill">LSTM Time Series</span>
+        <span class="skill-pill">Autoencoders</span>
+        <span class="skill-pill">TensorFlow</span>
+        <span class="skill-pill">scikit-learn</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-name">Applied AI &amp; NLP</div>
+      <div class="skill-pills">
+        <span class="skill-pill">LLM Integration</span>
+        <span class="skill-pill">Transcript Analytics</span>
+        <span class="skill-pill">GPT API</span>
+        <span class="skill-pill">Prompt Engineering</span>
+        <span class="skill-pill">NL-to-SQL</span>
+        <span class="skill-pill">Local LLMs</span>
+        <span class="skill-pill">Text Classification</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-name">Analytics &amp; Visualization</div>
+      <div class="skill-pills">
+        <span class="skill-pill">Exploratory Data Analysis</span>
+        <span class="skill-pill">matplotlib</span>
+        <span class="skill-pill">ggplot2</span>
+        <span class="skill-pill">Financial Analysis</span>
+        <span class="skill-pill">Performance Metrics</span>
+        <span class="skill-pill">Reporting</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-name">Operations &amp; Strategy</div>
+      <div class="skill-pills">
+        <span class="skill-pill">Process Improvement</span>
+        <span class="skill-pill">Project Management</span>
+        <span class="skill-pill">Change Management</span>
+        <span class="skill-pill">Stakeholder Management</span>
+        <span class="skill-pill">Cross-functional Leadership</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -832,47 +826,27 @@
 <section id="contact">
   <div class="fade-up">
     <div class="section-label">Contact</div>
-    <h2 class="section-title">Start a conversation</h2>
+    <h2 class="section-title">Let's connect</h2>
   </div>
-  <div class="contact-layout fade-up">
-    <div class="contact-text">
-      <p>Interested in working together or have a project in mind? Refinaxa is currently available for freelance engagements. Reach out through any of the channels below.</p>
-      <div class="contact-links">
-        <a href="mailto:Refinaxa@protonmail.com" class="contact-link">
-          <span class="contact-link-icon">@</span>
-          Refinaxa@protonmail.com
-        </a>
-        <a href="https://www.linkedin.com/in/adwoa-nyame/" class="contact-link" target="_blank">
-          <span class="contact-link-icon">in</span>
-          LinkedIn
-        </a>
-        <a href="https://github.com/aanyam22" class="contact-link" target="_blank">
-          <span class="contact-link-icon">gh</span>
-          GitHub
-        </a>
-      </div>
-    </div>
-    <div class="contact-form-area">
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" placeholder="Your name">
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="your@email.com">
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea rows="5" placeholder="Tell me about your project..."></textarea>
-      </div>
-      <a href="mailto:Refinaxa@protonmail.com" class="btn-primary" style="text-align:center;">Send Message</a>
-    </div>
+  <div class="contact-links fade-up">
+    <a href="mailto:aanyame14@protonmail.com" class="contact-link">
+      <span class="contact-link-icon">@</span>
+      aanyame14@protonmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/adwoa-nyame/" class="contact-link" target="_blank">
+      <span class="contact-link-icon">in</span>
+      linkedin.com/in/adwoa-nyame
+    </a>
+    <a href="https://github.com/aanyam22" class="contact-link" target="_blank">
+      <span class="contact-link-icon">gh</span>
+      github.com/aanyam22
+    </a>
   </div>
 </section>
 
 <footer>
-  <div class="footer-logo">Refinaxa</div>
-  <div class="footer-copy">&copy; 2026 Refinaxa. All rights reserved.</div>
+  <div class="footer-name">Adwoa Nyame</div>
+  <div class="footer-copy">&copy; 2026. All rights reserved.</div>
 </footer>
 
 <script>
