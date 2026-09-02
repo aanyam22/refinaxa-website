@@ -610,29 +610,46 @@
   </div>
   <div class="projects-grid fade-up">
 
-    <!-- FEATURED: LLM project -->
+    <!-- FEATURED: Fivecast capstone -->
     <div class="project-card featured">
       <div class="project-left">
-        <div class="project-featured-badge">Featured · Active</div>
+        <div class="project-featured-badge">Featured · Capstone</div>
         <div class="project-number">01</div>
-        <div class="project-domain">Applied AI · Contact Center</div>
-        <div class="project-title">LLM-Powered Customer Outcome Analysis</div>
+        <div class="project-domain">Applied AI · Financial Services</div>
+        <div class="project-title">Fivecast — Earnings Call Intelligence Platform</div>
       </div>
       <div class="project-right">
-        <p class="project-desc">Leveraging large language models to analyze phone and web chat transcripts, identifying patterns that lead to poor customer outcomes. The pipeline ingests raw transcript data, uses LLM-based classification to flag negative interactions, and surfaces actionable signals for operations teams to improve agent performance and customer experience at scale. Built end to end in Python.</p>
+        <p class="project-desc">End-to-end earnings intelligence platform forecasting the size of a company's day-0 price reaction to its earnings call, across 305 public companies in 11 GICS sectors. Built an automated data pipeline (transcript discovery, Firecrawl retrieval, SEC EDGAR filings, market data), an NLP scoring layer using Loughran-McDonald and FinBERT sentiment, a RAG-based research assistant for querying transcripts, and a leak-safe forecasting model separating usable move-size signal from unsupported directional prediction. Delivered as a mobile-ready application. Team capstone project, Northwestern MSDS 498.</p>
         <div class="project-tags">
-          <span class="tag">LLMs</span>
           <span class="tag">NLP</span>
-          <span class="tag">Text Classification</span>
+          <span class="tag">RAG</span>
+          <span class="tag">FinBERT</span>
+          <span class="tag">Time Series</span>
           <span class="tag">Python</span>
-          <span class="tag">Contact Center Analytics</span>
-          <span class="tag">Operations</span>
+          <span class="tag">Team Capstone</span>
         </div>
       </div>
     </div>
 
     <div class="project-card">
       <div class="project-number">02</div>
+      <div class="project-domain">NLP · Contact Center</div>
+      <div class="project-title">Detecting Escalation Risk from Customer Sentiment Trajectories</div>
+      <p class="project-desc">Investigated whether the trajectory of a customer's sentiment across a contact-center call, not just a single negative moment, provides an early warning signal for escalation. Fine-tuned DistilBERT/BERT sentiment classifiers on EmoWOZ, converted turn-level sentiment into conversation-level trajectories, and tested multiple escalation-outcome models (logistic regression, LSTM, LightGBM) against topic-only baselines on the ABCD dataset, with bootstrap confidence intervals and Cohen's kappa across escalation label definitions. Integrated the trained models into a tool-calling GPT-4o-mini agent for supervisor coaching queries.</p>
+      <div class="project-tags">
+        <span class="tag">NLP</span>
+        <span class="tag">DistilBERT</span>
+        <span class="tag">BERT</span>
+        <span class="tag">LightGBM</span>
+        <span class="tag">Python</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/aanyam22/transcript-escalations" class="project-link" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-number">03</div>
       <div class="project-domain">Real Estate</div>
       <div class="project-title">Melbourne Housing Price Benchmark</div>
       <p class="project-desc">Clustering 8,887 properties by physical characteristics to identify distinct property types for price benchmarking, independent of location labels.</p>
@@ -648,7 +665,7 @@
     </div>
 
     <div class="project-card">
-      <div class="project-number">03</div>
+      <div class="project-number">04</div>
       <div class="project-domain">AI &amp; NLP</div>
       <div class="project-title">Natural Language to SQL Query Engine</div>
       <p class="project-desc">An AI-powered query engine that translates plain English questions into executable SQL using GPT-3.5, applied to Amazon product and review data hosted in PostgreSQL.</p>
@@ -664,7 +681,7 @@
     </div>
 
     <div class="project-card">
-      <div class="project-number">04</div>
+      <div class="project-number">05</div>
       <div class="project-domain">Finance</div>
       <div class="project-title">Loan Default Risk Prediction</div>
       <p class="project-desc">End-to-end credit risk pipeline predicting the likelihood of loan default using borrower and loan-level features, with SHAP-based explainability to surface the drivers behind each risk score.</p>
@@ -680,7 +697,7 @@
     </div>
 
     <div class="project-card">
-      <div class="project-number">05</div>
+      <div class="project-number">06</div>
       <div class="project-domain">Sports Analytics</div>
       <div class="project-title">WNBA Player Analytics &amp; Outcome Prediction</div>
       <p class="project-desc">Clustering WNBA players by playing style, predicting game outcomes, and identifying potentially mispriced betting lines using neural network models.</p>
@@ -697,7 +714,7 @@
     </div>
 
     <div class="project-card">
-      <div class="project-number">06</div>
+      <div class="project-number">07</div>
       <div class="project-domain">E-Commerce</div>
       <div class="project-title">Ecommerce Return Fraud Analysis</div>
       <p class="project-desc">Clustering return transactions to detect patterns indicative of return fraud, surfacing high-risk segments and behavioral signals to support loss prevention teams.</p>
@@ -714,7 +731,7 @@
     </div>
 
     <div class="project-card">
-      <div class="project-number">07</div>
+      <div class="project-number">08</div>
       <div class="project-domain">Political Science</div>
       <div class="project-title">Political Distrust Analysis</div>
       <p class="project-desc">Applying PCA to survey and behavioral data to identify latent dimensions of political distrust, revealing distinct population segments and their underlying attitudes toward institutions.</p>
